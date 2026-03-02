@@ -18,15 +18,18 @@ build:
     - {{ pin_subpackage('shortcut', max_pin="x") }}
 
 requirements:
+  host:
+    - python >=3.9
   run:
-    - python >=3.6
-    - biopython >=1.85
-    - r-base >=4.3.3
-    - r-tidyverse >=2.0
-    - r-ggplot2 >=3.5.2
-    - shortstack >=4.0.4
+    - python >=3.9
     - cutadapt >=4.8
-    - rpy2
+    - pandas
+    - plotly
+    # CLI tools used by subprocess calls in the script:
+    - gawk
+    - grep
+    - gzip
+    - coreutils
 
 
 test:
